@@ -15,23 +15,65 @@ export default function ProjectsPage() {
       title: "FirstStep",
       description: "A comprehensive recruitment platform with skill-matching algorithms, interview scheduling, and automated deployment via Azure.",
       technologies: ["ASP.NET Core", "Angular", "MSSQL", "Azure", "Entity Framework"],
+      category: "Software (RESTful)",
+      date: "2023 - 2024",
       href: "/projects/firststep",
     },
     {
       title: "ITW Computers",
       description: "A microservices-based online retail shop featuring multi-language services and a full CI/CD pipeline.",
       technologies: ["Go", "Spring Boot", "Node.js", "Next.js", "Docker", "AWS"],
+      category: "Software (Microservice)",
+      date: "2024",
       href: "/projects/itw-computers",
     },
     {
       title: "Internify",
       description: "An internship tracking platform for IT undergraduates to discover opportunities and manage CVs.",
       technologies: ["Express", "PostgreSQL", "AWS S3", "AWS EC2"],
+      category: "Software (RESTful)",
+      date: "2024",
       href: "/projects/internify",
     },
   ];
 
   const otherProjects: ProjectDetails[] = [
+    {
+      title: "Portfolio Website",
+      description: "A modern, responsive personal portfolio website showcasing my projects, experience, and skills.",
+      fullDescription: `A modern, responsive personal portfolio website built with Next.js 16 and React 19. This portfolio showcases my professional journey, projects, education, and technical skills in an elegant and interactive design.
+
+The website features a GitHub-inspired dark theme with smooth animations and transitions. It includes dedicated sections for featured projects with detailed case studies, work experience timeline, education background, and a contact form.
+
+Key highlights:
+• Server-side rendering for optimal performance and SEO
+• Responsive design that works seamlessly across all devices
+• Interactive project modals with embedded videos and image galleries
+• Dark theme with custom CSS variables for consistent styling
+• Contact form with email integration
+• Clean, maintainable codebase with TypeScript
+
+This portfolio serves as both a showcase of my work and a demonstration of my frontend development capabilities using modern web technologies.`,
+      year: "2024",
+      association: "Personal Project",
+      category: "Software",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase"],
+      skills: ["Frontend Development", "React", "Next.js", "TypeScript", "Tailwind CSS", "Responsive Design", "UI/UX"],
+      features: [
+        "Server-side rendering with Next.js 16",
+        "Modern React 19 with latest features",
+        "Fully responsive design",
+        "GitHub-inspired dark theme",
+        "Interactive project showcases with modals",
+        "Contact form integration",
+        "TypeScript for type safety"
+      ],
+      screenshots: 0,
+      screenshotBasePath: "",
+      links: {
+        github: "https://github.com/Isuranga-2001/portfolio"
+      }
+    },
     {
       title: "Air Quality Monitoring System",
       description: "IoT-based indoor air quality monitoring system with real-time data visualization and alerts.",
@@ -51,8 +93,9 @@ Sensors:
 • DS18B20 - Temperature Sensor
 • ENC28J60 - Ethernet Module
 • RTC and SD card module`,
-      year: "Aug 2022 - Jul 2023",
+      year: "2022 - 2023",
       association: "University of Moratuwa",
+      category: "Hardware",
       technologies: ["Node.js", "Firebase", "MQTT", "ESP32", "IoT Sensors"],
       skills: ["Problem Solving", "Web Application Development", "Internet of Things (IoT)", "Air Quality Analysis", "Node.js", "MQTT", "Firebase"],
       features: [
@@ -85,6 +128,7 @@ Features:
 The game challenges players to navigate through levels while protecting crystals from enemies, using various power-ups to enhance their abilities.`,
       year: "2022",
       association: "Ceylon School of Game Development Competition",
+      category: "Game",
       technologies: ["Unity", "C#"],
       skills: ["C#", "Game Development", "Unity"],
       features: [
@@ -116,6 +160,7 @@ Implemented a robust system to oversee KMC's water-related projects. The applica
 Established a daily monitoring protocol for KMC's three water treatment plants. The application evaluates 10 critical water quality parameters, ensuring consistent tracking and facilitating future report generation.`,
       year: "2021",
       association: "Self Employed (Freelance)",
+      category: "Software (Desktop App)",
       technologies: [".NET Framework", "C#", "Windows Forms", "MSSQL"],
       skills: ["Problem Solving", "C#", "Software Design", ".NET Framework", "Software Development", "Visual Studio", "MSSQL", "Desktop Application Development"],
       features: [
@@ -143,6 +188,7 @@ Technologies:
 • Windows Form Applications`,
       year: "2021",
       association: "Self Employed (Freelance)",
+      category: "Software (Desktop App)",
       technologies: ["C#", ".NET Framework", "Windows Forms", "GitHub"],
       skills: ["Problem Solving", "C#", "Software Design", "Software Development", "Visual Studio", "MSSQL", "Desktop Application Development"],
       features: [
@@ -177,6 +223,7 @@ I released this application for three different platforms using different codeba
 3. As a UWP (Universal Windows Platform) Application → Developed using UWP application template`,
       year: "2019",
       association: "St. Sylvester's College",
+      category: "Tool",
       technologies: ["C#", ".NET Framework 4.8", "Xamarin", "UWP", "WinForms"],
       skills: ["C#", "Xamarin", ".NET Framework", "WinForms", "Visual Studio", "Desktop Application Development"],
       features: [
@@ -210,6 +257,7 @@ Technologies that used in this application:
 • StreamReader Library`,
       year: "2018-2019",
       association: "St. Sylvester's College",
+      category: "Tool",
       technologies: ["C#", ".NET Framework", "StreamReader"],
       skills: ["Problem Solving", "C#", "Visual Studio", "Desktop Application Development"],
       features: [
@@ -258,6 +306,8 @@ Technologies that used in this application:
                 title={project.title}
                 description={project.description}
                 tags={project.technologies}
+                category={project.category}
+                date={project.date}
                 href={project.href}
               />
             ))}
@@ -275,7 +325,12 @@ Technologies that used in this application:
                 className="cursor-pointer h-full"
               >
                 <div className="h-full border border-[var(--gh-border-default)] rounded-lg p-6 bg-[var(--gh-canvas-subtle)] hover:border-[var(--gh-border-muted)] transition-all hover:shadow-lg hover:shadow-[var(--gh-accent-emphasis)]/10">
-                  <p className="text-sm text-[var(--gh-fg-muted)] mb-2">{project.year}</p>
+                  <div className="flex items-center justify-between mb-2">
+                    <p className="text-sm text-[var(--gh-fg-muted)]">{project.year}</p>
+                    <span className="px-2 py-0.5 text-xs font-semibold bg-[var(--gh-success-emphasis)] text-white rounded">
+                      {project.category}
+                    </span>
+                  </div>
                   <h3 className="text-xl font-semibold text-[var(--gh-fg-default)] mb-3">
                     {project.title}
                   </h3>

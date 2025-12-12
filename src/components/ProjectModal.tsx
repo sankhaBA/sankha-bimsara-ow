@@ -9,6 +9,7 @@ export interface ProjectDetails {
   fullDescription: string;
   year: string;
   association: string;
+  category: string;
   technologies: string[];
   skills: string[];
   features?: string[];
@@ -74,9 +75,14 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
         {/* Header */}
         <div className="sticky top-0 z-10 flex items-center justify-between p-6 bg-[var(--gh-canvas-default)] border-b border-[var(--gh-border-default)]">
           <div>
-            <h2 className="text-2xl font-bold text-[var(--gh-fg-default)]">
-              {project.title}
-            </h2>
+            <div className="flex items-center gap-3 mb-1">
+              <h2 className="text-2xl font-bold text-[var(--gh-fg-default)]">
+                {project.title}
+              </h2>
+              <span className="px-2 py-0.5 text-xs font-semibold bg-[var(--gh-success-emphasis)] text-white rounded">
+                {project.category}
+              </span>
+            </div>
             <p className="text-sm text-[var(--gh-fg-muted)]">
               {project.year} • {project.association}
             </p>
