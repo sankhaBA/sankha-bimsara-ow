@@ -1,11 +1,15 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Card from "@/components/Card";
 import SafeWidget from "@/components/SafeWidget";
+import { useState } from "react";
+import GithubStatusPopup from "@/components/GithubStatusPopup";
 
 export default function Home() {
+  const [showGithubStatus, setShowGithubStatus] = useState(false);
   const skills = {
     "Programming Languages": ["C#", "Python", "Java", "Go", "JavaScript", "TypeScript", "Ballerina", "C"],
     "Backend": ["ASP.NET Core", "Node.js", "NestJS", "Express", "Spring Boot", "FastAPI", "Flask"],
@@ -224,6 +228,14 @@ export default function Home() {
                 >
                   Contact Me
                 </Link>
+                <Link
+                  href="#"
+                  onClick={e => { e.preventDefault(); setShowGithubStatus(true); }}
+                  className="px-1 py-1 text-[var(--gh-accent-fg)] font-medium hover:text-[var(--gh-accent-emphasis)] transition-colors"
+                  style={{ cursor: 'pointer' }}
+                >
+                  View GitHub Status
+                </Link>
               </div>
             </div>
 
@@ -265,21 +277,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contribution Graph */}
-        <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-baseline sm:justify-between">
-            <h2 className="text-3xl font-bold text-[var(--gh-fg-default)]">Contribution Graph (GitHub)</h2>
-            <span className="text-xs px-2 py-1 rounded-full bg-[var(--gh-attention-subtle)] text-[var(--gh-attention-fg)] font-medium self-start sm:self-center">Live</span>
-          </div>
-          <div className="mt-6 overflow-hidden rounded-md">
-            <img
-              src="https://ghchart.rshah.org/4fb6f9/Isuranga-2001"
-              alt="GitHub contribution graph for Isuranga-2001"
-              loading="lazy"
-              className="w-full h-auto"
-            />
-          </div>
-        </section>
+        {/* GitHub Status Popup */}
+        <GithubStatusPopup open={showGithubStatus} onClose={() => setShowGithubStatus(false)} />
 
         {/* Skills Section */}
         <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20">
@@ -310,41 +309,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* GitHub Stats Section */}
-        <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-baseline sm:justify-between">
-            <div>
-              <h2 className="text-3xl font-bold text-[var(--gh-fg-default)]">GitHub Pulse</h2>
-              <p className="text-[var(--gh-fg-muted)]">Live widgets from statsforgit.com</p>
-            </div>
-            <a
-              href="https://www.statsforgit.com/Isuranga-2001"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[var(--gh-accent-fg)] hover:text-[var(--gh-accent-emphasis)] font-medium transition-colors"
-            >
-              View on statsforgit
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M11 3a1 1 0 011-1h5a1 1 0 011 1v5a1 1 0 11-2 0V5.414l-6.293 6.293a1 1 0 01-1.414-1.414L14.586 4H12a1 1 0 01-1-1z" clipRule="evenodd" />
-                <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-              </svg>
-            </a>
-          </div>
-
-          <div className="mt-8 space-y-6">
-            <SafeWidget
-              src="https://greptile-stats.vercel.app/api/widget/Isuranga-2001/private-stats"
-              alt="GitHub stats for Isuranga-2001 from statsforgit"
-              title="GitHub Stats"
-            />
-
-            {/* <SafeWidget
-              src="https://greptile-stats.vercel.app/api/widget/Isuranga-2001/contributions"
-              alt="GitHub contributions chart for Isuranga-2001 from statsforgit"
-              title="Contributions"
-            /> */}
-          </div>
-        </section>
+        {/* ...GitHub Pulse section moved to popup... */}
 
         {/* Highlights Section */}
         <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20">
