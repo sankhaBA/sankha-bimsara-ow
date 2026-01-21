@@ -1,5 +1,7 @@
+"use client";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export default function Education() {
   return (
@@ -33,12 +35,15 @@ export default function Education() {
                 <p>Dean's List in all 5 semesters (GPAs: 3.89, 3.87, 3.95, 3.96, 3.90)</p>
               </div>
             </div>
-            <button
-              onClick={() => window.open('/transcript.pdf', '_blank')}
-              className="px-4 py-2 bg-[var(--gh-accent-fg)] text-white rounded hover:opacity-80 transition-opacity"
+            <Link
+              href="/transcript.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-1 py-1 text-[var(--gh-accent-fg)] text-sm font-medium hover:text-[var(--gh-accent-emphasis)] transition-colors"
+              style={{ cursor: 'pointer' }}
             >
-              View Transcript (PDF)
-            </button>
+              View Transcript (Up to 5th Semester)
+            </Link>
           </div>
 
           {/* Shibaura Institute of Technology */}

@@ -5,36 +5,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Card from "@/components/Card";
 import SafeWidget from "@/components/SafeWidget";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import GithubStatusPopup from "@/components/GithubStatusPopup";
 
 export default function Home() {
-  // Log viewer details to Supabase via API on first page load
-  useEffect(() => {
-    async function logViewer() {
-      try {
-        const viewerData = {
-          user_agent: typeof window !== "undefined" ? window.navigator.userAgent : null,
-          visit_time: new Date().toISOString(),
-        };
-        const response = await fetch("/api/log-viewer", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(viewerData),
-        });
-        if (!response.ok) {
-          // Optionally log error to console for debugging
-          console.error("Failed to log viewer:", response.status, await response.text());
-        }
-      } catch (e) {
-        // Optionally log error to console for debugging
-        console.error("Error logging viewer:", e);
-      }
-    }
-    logViewer();
-    // Only run once per mount
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
   const [showGithubStatus, setShowGithubStatus] = useState(false);
   const skills = {
     "Programming Languages": ["C#", "Python", "Java", "Go", "JavaScript", "TypeScript", "Ballerina", "C"],
