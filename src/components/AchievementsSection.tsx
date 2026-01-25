@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { certificates, awards } from "@/data/portfolio";
+import { awards } from "@/data/awards";
+import { certificates } from "@/data/certificates";
 
 export default function AchievementsSection() {
   return (

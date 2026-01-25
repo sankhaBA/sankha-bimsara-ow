@@ -1,4 +1,4 @@
-import { skills } from "@/data/portfolio";
+import { skills } from "@/data/skills";
 
 export default function SkillsSection() {
   return (

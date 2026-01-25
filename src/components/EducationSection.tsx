@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { education } from "@/data/portfolio";
+import { education } from "@/data/education";
 
 export default function EducationSection() {
   return (

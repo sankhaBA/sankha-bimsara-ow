@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { experiences } from "@/data/portfolio";
+import { experiences } from "@/data/experiences";
 
 export default function ExperiencesSection() {
   return (

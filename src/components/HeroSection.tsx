@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { profile } from "@/data/portfolio";
+import { profile } from "@/data/profile";
 
 export default function HeroSection() {
   return (

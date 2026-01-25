@@ -1,7 +1,6 @@
 "use client";
 
-import { projects } from "@/data/portfolio";
-import Link from "next/link";
+import { projects } from "@/data/projects";
 
 export default function ProjectsSection() {
   return (
