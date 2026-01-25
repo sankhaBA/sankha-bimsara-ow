@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Isuranga Warnasooriya - Full Stack Developer",
+  title: "Sankha Bimsara Ambeypitiya - Associate Software Engineer",
   description:
-    "Portfolio of Isuranga Warnasooriya - Associate Software Engineer specializing in Full Stack Development with expertise in Node.js, .NET, React, and Angular.",
+    "Portfolio of Sankha Bimsara Ambeypitiya - Associate Software Engineer specializing in Full Stack Development with expertise in Node.js, React, and Cloud Technologies.",
 };
 
 export default function RootLayout({

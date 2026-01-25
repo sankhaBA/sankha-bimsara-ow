@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-lg font-semibold text-[var(--gh-fg-default)] mb-4">
-              Isuranga Warnasooriya
+              Sankha Ambeypitiya
             </h3>
             <p className="text-[var(--gh-fg-muted)] text-sm">
               Associate Software Engineer & Final Year IT Undergraduate at University of Moratuwa
@@ -29,23 +29,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/experience" className="text-[var(--gh-accent-fg)] hover:underline">
+                <Link href="#experience" className="text-[var(--gh-accent-fg)] hover:underline">
                   Experience
                 </Link>
               </li>
               <li>
-                <Link href="/education" className="text-[var(--gh-accent-fg)] hover:underline">
+                <Link href="#education" className="text-[var(--gh-accent-fg)] hover:underline">
                   Education
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="text-[var(--gh-accent-fg)] hover:underline">
+                <Link href="#projects" className="text-[var(--gh-accent-fg)] hover:underline">
                   Projects
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-[var(--gh-accent-fg)] hover:underline">
-                  Contact
                 </Link>
               </li>
             </ul>
@@ -58,7 +53,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a 
-                  href="https://github.com/Isuranga-2001" 
+                  href="https://github.com/sankhaBA" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-[var(--gh-accent-fg)] hover:underline"
@@ -68,7 +63,7 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="https://linkedin.com/in/isuranga-warnasooriya" 
+                  href="https://linkedin.com/in/sankhabimsara" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-[var(--gh-accent-fg)] hover:underline"
@@ -76,22 +71,12 @@ export default function Footer() {
                   LinkedIn
                 </a>
               </li>
-              <li>
-                <a 
-                  href="https://medium.com/@isurangawarnasooriya" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-[var(--gh-accent-fg)] hover:underline"
-                >
-                  Medium
-                </a>
-              </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t border-[var(--gh-border-default)] text-center text-[var(--gh-fg-muted)] text-sm">
-          <p>&copy; {currentYear} Isuranga Warnasooriya. All rights reserved.</p>
+          <p>&copy; {currentYear} Sankha Ambeypitiya. All rights reserved.</p>
         </div>
       </div>
     </footer>

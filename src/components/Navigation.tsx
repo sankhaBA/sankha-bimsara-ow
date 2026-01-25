@@ -10,10 +10,9 @@ export default function Navigation() {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Experience", path: "/experience" },
-    { name: "Education", path: "/education" },
-    { name: "Projects", path: "/projects" },
-    { name: "Contact", path: "/contact" },
+    { name: "Experience", path: "#experience" },
+    { name: "Education", path: "#education" },
+    { name: "Projects", path: "#projects" },
   ];
 
   return (
@@ -21,7 +20,7 @@ export default function Navigation() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="text-xl font-semibold text-[var(--gh-fg-default)] hover:text-[var(--gh-accent-fg)] transition-colors">
-            Isuranga Warnasooriya
+            Sankha Ambeypitiya
           </Link>
           
           <div className="flex items-center gap-1">
@@ -41,7 +40,7 @@ export default function Navigation() {
               ))}
             </div>
             <a
-              href="/resume.pdf"
+              href={process.env.NEXT_PUBLIC_RESUME_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="ml-2 px-4 py-2 bg-[var(--gh-accent-emphasis)] text-white rounded-md text-sm font-medium hover:bg-[var(--gh-accent-fg)] transition-colors"
