@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
-/* GitHub Dark Theme Colors */
+/* Light Chocolate/Brown Theme Colors */
 :root {
-  --gh-canvas-default: #0d1117;
-  --gh-canvas-subtle: #161b22;
-  --gh-canvas-inset: #010409;
-  --gh-border-default: #30363d;
-  --gh-border-muted: #21262d;
-  --gh-fg-default: #e6edf3;
-  --gh-fg-muted: #7d8590;
-  --gh-fg-subtle: #6e7681;
-  --gh-accent-fg: #2f81f7;
-  --gh-accent-emphasis: #1f6feb;
-  --gh-success-fg: #3fb950;
-  --gh-attention-fg: #d29922;
-  --gh-danger-fg: #f85149;
+  --gh-canvas-default: #faf8f5;
+  --gh-canvas-subtle: #f5f0ea;
+  --gh-canvas-inset: #ffffff;
+  --gh-border-default: #d4c5b9;
+  --gh-border-muted: #e8dfd5;
+  --gh-fg-default: #2d1810;
+  --gh-fg-muted: #6b5548;
+  --gh-fg-subtle: #8b7355;
+  --gh-accent-fg: #a0522d;
+  --gh-accent-emphasis: #8b4513;
+  --gh-success-fg: #7b3f00;
+  --gh-attention-fg: #cd853f;
+  --gh-danger-fg: #8b2500;
 }
 
 @theme inline {
@@ -46,7 +46,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar - GitHub style */
+/* Custom scrollbar - Light Chocolate Theme */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -57,10 +57,10 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--gh-border-default);
+  background: var(--gh-accent-fg);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--gh-fg-subtle);
+  background: var(--gh-accent-emphasis);
 }

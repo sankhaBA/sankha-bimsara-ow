@@ -2,21 +2,23 @@
 
 import Link from "next/link";
 import { profile } from "@/data/profile";
+import BackgroundCarousel from "./BackgroundCarousel";
 
 export default function HeroSection() {
   return (
-    <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20 min-h-screen flex items-center">
+    <section className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20 min-h-screen flex items-center">
+      <BackgroundCarousel />
       <div className="text-center w-full">
         <h1 className="text-5xl font-bold text-[var(--gh-fg-default)] mb-6 leading-tight">
           Hi, I'm <span className="text-[var(--gh-accent-fg)]">{profile.name}</span>
         </h1>
-          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/30 rounded-lg justify-center">
-            <svg className="w-5 h-5 text-amber-500" fill="currentColor" viewBox="0 0 24 24">
+          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-gradient-to-r from-amber-700/20 to-orange-800/20 border border-amber-800/40 rounded-lg justify-center">
+            <svg className="w-5 h-5 text-amber-800" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
             </svg>
-            <span className="text-sm font-medium text-amber-600 dark:text-amber-400">International Award Winner</span>
+            <span className="text-sm font-medium text-amber-900">International Award Winner</span>
             <span className="text-sm text-[var(--gh-fg-muted)]">•</span>
-            <span className="text-sm font-medium text-blue-600 dark:text-blue-400">1+ Years of Industry Expertise</span>
+            <span className="text-sm font-medium text-[var(--gh-accent-emphasis)]">1+ Years of Industry Expertise</span>
           </div>
           <p className="text-xl text-[var(--gh-fg-muted)] mb-4 leading-relaxed font-medium">
             {profile.role}
