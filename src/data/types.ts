@@ -37,6 +37,7 @@ export interface Project {
   href?: string;
   year?: string;
   status?: string;
+  links?: { title: string; href: string }[];
 }
 
 export interface Education {

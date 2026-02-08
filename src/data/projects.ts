@@ -10,7 +10,8 @@ export const projects: Project[] = [
     isWinner: true,
     winnerBadge: "Huawei Asia Pacific Winner 2025",
     year: "2024",
-    status: "Completed"
+    status: "Completed",
+    links: []
   },
   {
     id: "npm-package-datacanvas",
@@ -19,7 +20,8 @@ export const projects: Project[] = [
     description: "Client SDK for data retrieval using API Keys",
     stack: ["TypeScript", "Node"],
     year: "2024",
-    status: "In Progress"
+    status: "In Progress",
+    links: [{title: "NPM Link", href: "https://www.npmjs.com/package/@datacanvas/sdk"}]
   },
   {
     id: "verifica",
@@ -28,7 +30,8 @@ export const projects: Project[] = [
     description: "Biometric student verification system enabling secure authentication fingerprint scanning.",
     stack: ["JavaScript", "React Native", "Next"],
     year: "2024",
-    status: "Completed"
+    status: "Completed",
+    links: []
   },
   {
     id: "datacanvas",
@@ -37,7 +40,8 @@ export const projects: Project[] = [
     description: "IoT SaaS platform for IoT data storage and analysis with customizable features.",
     stack: ["TypeScript", "React", "Node.js", "PostgreSQL", "MQTT", "Firebase"],
     year: "2024",
-    status: "Completed"
+    status: "Completed",
+    links: []
   },
   {
     id: "ordereka",
@@ -46,7 +50,8 @@ export const projects: Project[] = [
     stack: ["Next.js", "Supabase", "PostgreSQL"],
     year: "2024",
     affiliation: "SaaS Product",
-    status: "Completed"
+    status: "Completed",
+    links: []
   },
   {
     id: "hawk-iot",
@@ -55,7 +60,8 @@ export const projects: Project[] = [
     stack: ["JavaScript", "React Native", "MQTT", "Firebase"],
     year: "2024",
     affiliation: "Freelance Product",
-    status: "Completed"
+    status: "Completed",
+    links: []
   },
   {
     id: "fyp",
@@ -64,6 +70,7 @@ export const projects: Project[] = [
     stack: ["In Review"],
     year: "2024",
     affiliation: "Academic Project",
-    status: "In Progress"
+    status: "In Progress",
+    links: []
   }
 ];
